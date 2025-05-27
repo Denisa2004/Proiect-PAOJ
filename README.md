@@ -40,15 +40,15 @@ Aplicația folosește următoarele 8 tipuri de obiecte:
 
 ## 📂 Colectii de date folosite
 
-Datele sunt gestionate în colecții (liste Python):
+Datele sunt gestionate în colecții:
 
-- `lista_autori`  
-- `lista_carti`  
+- `carti` ( TreeSet cu titlurile sortate alfabetic )
+- `lista_autori`   
 - `lista_cititori`  
 - `lista_bibliotecari`  
 - `lista_edituri`  
 - `lista_sectiuni`  
-- `lista_imprumuturi`  
+- `imprumuturi` ( HashMap cu cititor-lista de imprumuturi )  
 
 ---
 
