@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class BibliotecaService {
-    private List<Carte> carti = new ArrayList<>();
+    private SortedSet<Carte> carti = new TreeSet<>(Comparator.comparing(Carte::getTitlu));
     private List<Cititor> cititori = new ArrayList<>();
     private List<Bibliotecar> bibliotecari = new ArrayList<>();
     private List<Editura> edituri = new ArrayList<>();
@@ -87,7 +87,6 @@ public class BibliotecaService {
     public void afiseazaCartiDinSectiune(String numeSectiune) {
         carti.stream()
                 .filter(c -> c.getSectiune().getNume().equalsIgnoreCase(numeSectiune))
-                .sorted(Comparator.comparing(Carte::getTitlu))
                 .forEach(System.out::println);
     }
 }
